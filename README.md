@@ -9,3 +9,9 @@ The four exploration strategies and four fine optimizers are implemented separat
 The model is illustrative, not a calibrated electromagnetic or mechanical solver. The NLoS scenario attenuates the direct ray globally. Cable lengths are exact Euclidean inverse kinematics; tension feasibility, acceleration limits and obstacle collisions are not solved. Spatial searching does not certify a global optimum. Gain from voltage tuning is computed rather than guaranteed. The 3 dB gate is applied to unfiltered packets, so Gaussian ESP32 noise alone often causes rejection. If no batch is stable, the run reports that outcome rather than inventing a stable optimum. The gain baseline is the first filtered batch, even if that batch fails the stability gate.
 
 Validation: JavaScript syntax check passed; a Node harness exercised 96 complete combinations of four exploration strategies, four optimizers, two sensors and three modes with simulated rendering. It verified termination, bounds, batch size, quantization, rejection and final rollback. 91 combinations found a stable result; five correctly reported none. Browser smoke testing confirmed rendering and single-step acquisition. A sustained 60 FPS performance benchmark was not performed; performance depends on GPU, viewport and browser.
+
+## Язык интерфейса / Interface language
+
+Русский интерфейс включён по умолчанию. Переключатель RU / EN находится в шапке; выбор сохраняется в браузере. Переключение не сбрасывает измерения и не останавливает эксперимент. Переведены элементы управления, справка, статусы, журнал и подписи графиков. Имена столбцов CSV остаются английскими для совместимости.
+
+Russian is the default UI language. Use RU / EN in the header; the preference is saved locally. Switching languages preserves the running experiment and collected measurements. CSV column names remain unchanged for compatibility.
